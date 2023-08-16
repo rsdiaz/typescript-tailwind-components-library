@@ -1,12 +1,12 @@
-import cx from '../../utils/classNames';
-import React from 'react';
-import ButtonGroup from './button-group';
+import cx from '../../utils/classNames'
+import React from 'react'
+import ButtonGroup from './button-group'
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'cta' | 'rent';
-  size?: 'sm' | 'md' | 'lg';
-  fullWidth?: boolean;
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'cta' | 'rent'
+  size?: 'sm' | 'md' | 'lg'
+  fullWidth?: boolean
 }
 
 const ButtonComponent = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -45,16 +45,16 @@ const ButtonComponent = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )}
         {...props}
       >
-        <span className="flex flex-none items-center justify-center flex-row space-x-2">
+        <span className='flex flex-none items-center justify-center flex-row space-x-2'>
           {children}
         </span>
       </button>
-    );
+    )
   }
-);
+)
 
-ButtonComponent.displayName = 'Button';
+ButtonComponent.displayName = 'Button'
 
 export const Button = Object.assign(ButtonComponent, {
-  Group: ButtonGroup,
-});
+  Group: ButtonGroup
+})

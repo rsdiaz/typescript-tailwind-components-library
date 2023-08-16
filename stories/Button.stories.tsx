@@ -1,7 +1,7 @@
-import React from 'react';
-import { Meta } from '@storybook/react/dist/index';
-import { Button } from '../src/index';
-import { ButtonProps } from '../src/components/button/index';
+import React from 'react'
+import { Meta } from '@storybook/react/dist/index'
+import { Button } from '../src/index'
+import { ButtonProps } from '../src/components/button/index'
 
 export default {
   title: 'Components/Button',
@@ -10,17 +10,17 @@ export default {
     variant: {
       control: {
         type: 'radio',
-        options: ['primary', 'secondary', 'tertiary', 'cta', 'rent'],
-      },
+        options: ['primary', 'secondary', 'tertiary', 'cta', 'rent']
+      }
     },
     size: {
-      control: { type: 'radio', options: ['sm', 'md', 'lg'] },
+      control: { type: 'radio', options: ['sm', 'md', 'lg'] }
     },
     fullWidth: {
-      control: { type: 'boolean' },
-    },
-  },
-} as Meta;
+      control: { type: 'boolean' }
+    }
+  }
+} as Meta
 
 export const Variants = (args: ButtonProps) => (
   <div className="flex flex-col space-y-4 mt-8">
@@ -29,10 +29,10 @@ export const Variants = (args: ButtonProps) => (
       <Button variant="secondary">secondary</Button>
     </div>
   </div>
-);
+)
 Variants.args = {
-  variant: 'primary',
-};
+  variant: 'primary'
+}
 
 export const Sizes = (args: ButtonProps) => (
   <div className="flex flex-col space-y-4 mt-8">
@@ -52,7 +52,7 @@ export const Sizes = (args: ButtonProps) => (
       </Button>
     </div>
   </div>
-);
+)
 Sizes.args = {
-  variant: '',
-};
+  variant: ''
+}

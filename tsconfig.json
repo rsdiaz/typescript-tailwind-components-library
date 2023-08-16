@@ -15,7 +15,8 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "strictNullChecks": true
   },
   "include": [
     "src/**/*.ts"
