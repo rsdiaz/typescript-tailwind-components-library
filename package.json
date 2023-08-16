@@ -1,0 +1,65 @@
+{
+  "name": "typescript-tailwind-components-library",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build:lib": "rm -rf ./dist/ && npm run build:lib:esm && npm run build:lib:cjs && npm run build:css",
+    "build:lib:cjs": "tsc -p tsconfig.json",
+    "build:lib:esm": "tsc -p tsconfig.json --module esnext --declaration --outDir ./dist/esm",
+    "build:css": "postcss src/styles/tailwind.css -o dist/styles/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "ts-standard": {
+    "extends": [
+      "standard-with-typescript"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "keywords": [],
+  "author": "rsdiaz",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.3.0",
+    "@storybook/addon-interactions": "^7.3.0",
+    "@storybook/addon-links": "^7.3.0",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addon-styling": "^1.3.6",
+    "@storybook/blocks": "^7.3.0",
+    "@storybook/nextjs": "^7.3.0",
+    "@storybook/react": "^7.3.0",
+    "@storybook/testing-library": "^0.2.0",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.3.0",
+    "tailwindcss": "^3.3.3",
+    "ts-standard": "^12.0.2",
+    "typescript": "^5.1.6"
+  }
+}

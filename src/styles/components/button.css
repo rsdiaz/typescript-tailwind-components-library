@@ -1,0 +1,45 @@
+.btn {
+  @apply inline-flex h-10 text-[15px] px-6 items-center justify-center border border-transparent tracking-[0.38px] flex-row rounded-full transition-colors duration-150 font-poppins
+}
+
+/** Button variants */
+
+.btn-primary {
+  @apply font-medium no-underline bg-primary-medium hover:bg-primary focus:bg-primary active:bg-primary text-white focus:text-white active:text-white
+}
+.btn-secondary {
+  @apply font-semibold no-underline bg-transparent text-primary-medium hover:underline hover:text-primary-medium
+}
+.btn-tertiary {
+  @apply bg-transparent font-medium border-primary-medium text-primary-medium no-underline hover:text-white hover:bg-primary-medium focus:bg-primary-medium focus:text-white active:bg-primary-medium active:text-white
+}
+.btn-cta {
+  @apply font-medium no-underline bg-cta hover:bg-cta-medium focus:bg-cta-medium active:bg-cta-medium text-black
+}
+.btn-rent {
+  @apply font-medium no-underline bg-purple hover:bg-purple-medium focus:bg-purple-medium active:bg-purple-medium text-white focus:text-white active:text-white
+}
+
+/** Disabled Button */
+
+button.disabled, button[disabled], button:disabled, .btn.disabled, .btn[disabled], .btn:disabled {
+  @apply opacity-50 cursor-not-allowed pointer-events-none;
+}
+
+/** Button sizes */
+
+.btn-sm {
+  @apply h-8 text-sm px-4
+}
+.btn-md {
+  @apply h-10 text-[15px] px-6
+}
+.btn-lg {
+  @apply h-12 text-base px-10
+}
+
+/** Full width button */
+
+.btn-full {
+  @apply w-full
+}
