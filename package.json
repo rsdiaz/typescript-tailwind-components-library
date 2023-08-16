@@ -7,6 +7,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rsdiaz/typescript-tailwind-components-library"
+  },
   "engines": {
     "node": ">=10"
   },
